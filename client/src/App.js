@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { BrowserRouter as Router, Route } from "react-router-dom"
 import Movie from './Movies/Movie';
 import MovieList from './Movies/MovieList';
 import SavedList from './Movies/SavedList';
@@ -30,7 +30,7 @@ const App = () => {
   return (
     <div>
       <Router>
-        <Route exact path="/" component={MovieList} />
+        <Route path="/" component={MovieList} />
         <Route path = "/movies/:id" component={Movie} />
         <SavedList list={savedList} />
       </Router>
